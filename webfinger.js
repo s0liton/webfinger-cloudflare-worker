@@ -13,7 +13,6 @@ async function handleRequest(request) {
   return new Response('', {
     status: 404
   });
-}
 
 addEventListener('fetch', async event => {
   event.respondWith(handleRequest(event.request));
