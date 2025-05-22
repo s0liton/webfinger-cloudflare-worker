@@ -7,7 +7,8 @@ export default {
       {
         "subject":"acct:" + email,
           "links":[{"rel":"http://openid.net/specs/connect/1.0/issuer", "href":"https://auth.solitonradar.com"}]};
-    return new Response(jsonData, {
+    jsonDataString = jsonData.toString();
+    return new Response(jsonDataString, {
       headers: {
         'content-type': 'application/json;charset=UTF-8',
     },
