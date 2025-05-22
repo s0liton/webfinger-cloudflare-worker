@@ -3,7 +3,7 @@
 export default {
   async fetch(request, env, ctx) {
     const email = "pedro@solitonradar.com"
-    const jsonData = '{"subject":"acct:' + email + '","links":[{"rel":"http://webfinger.net/rel/profile-page","type":"text/html","href":"https://' + 'auth.solitonradar.com' + '/@' + 'pedro' + '"},{"rel":"self","type":"application/activity+json","href":"https://' + 'auth.solitonradar.com' + '/users/' + 'pedro' + '"},{"rel":"http://ostatus.org/schema/1.0/subscribe","template":"https://' + 'pedro' + '/authorize_interaction?uri={uri}"}]}';
+    const jsonData = '{"subject":"acct:' + email + '","links":[{"rel":"http://openid.net/specs/connect/1.0/issuer", "href":"https://auth.solitonradar.com}];
     return new Response(jsonData, {
       headers: {
         'content-type': 'application/json;charset=UTF-8',
